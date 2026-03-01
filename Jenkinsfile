@@ -16,10 +16,11 @@ pipeline {
   }
  stages{
     stage('check'){
-        steps {
-            git url: 'https://github.com/suwaiphyoe-beatriz/TemConverter.git'
-       }
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/suwaiphyoe-beatriz/TemConverter.git'
     }
+}
 
     stage('build job: '){
         steps {
