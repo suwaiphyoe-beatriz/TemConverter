@@ -59,17 +59,17 @@ pipeline {
     }
 
     stage('Build Docker Image') {
-      agent { label 'docker' }
       steps {
         script {
           docker.build("${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}")
         }
       }
     }
+
     stage('Push Docker Image to Docker Hub') {
-      agent { label 'docker' }
       steps {
         script {
+          env.PATH = "/usr/local/bin:${env.PATH}"
           docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS_ID) {
             docker.image("${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}").push()
           }
