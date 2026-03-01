@@ -10,6 +10,7 @@ pipeline {
     DOCKERHUB_CREDENTIALS_ID = 'docker-hub'
     DOCKERHUB_REPO = 'suph/temconverter'
     DOCKER_IMAGE_TAG = 'latest'
+    DOCKER_HOST = 'unix:///var/run/docker.sock'
   }
 
   stages {
