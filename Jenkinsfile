@@ -8,7 +8,7 @@ pipeline {
   environment {
     PATH = "/usr/local/bin:${env.PATH}"
     DOCKERHUB_CREDENTIALS_ID = 'docker-hub'
-    DOCKERHUB_REPO = 'suph/temconverter'
+    DOCKERHUB_REPO = 'suph03/temconverter'
     DOCKER_IMAGE_TAG = 'latest'
     DOCKER_HOST = 'unix:///var/run/docker.sock'
   }
