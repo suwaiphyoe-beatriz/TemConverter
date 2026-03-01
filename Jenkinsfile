@@ -15,6 +15,12 @@ pipeline {
 
   stages {
 
+    stage('check'){
+        steps {
+            git url: 'https://github.com/suwaiphyoe-beatriz/TemConverter.git'
+       }
+    }
+
     stage('Build') {
       steps {
         sh 'mvn clean install'
