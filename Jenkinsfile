@@ -7,7 +7,7 @@ pipeline {
 
   }
   environment {
-    PATH = PATH = "/usr/local/bin:${env.PATH}"
+    PATH = "/usr/local/bin:${env.PATH}"
      DOCKERHUB_CREDENTIALS_ID = 'docker_hub'
      DOCKERHUB_REPO = 'suph/temconverter'
      DOCKER_IMAGE_TAG = 'latest'
